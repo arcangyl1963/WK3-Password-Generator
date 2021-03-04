@@ -10,7 +10,7 @@ The challenge here was knowing where to start coding first. That required applyi
 My files can be accessed in the repository [HERE](https://github.com/arcangyl1963/WK3-Password-Generator)
 The image below shows the repository where my project files are located:
 
-![Password Generator Repository](./images/myportfoliopagereposcreenshot.png)
+![Password Generator Repository](./images/pwgeneratorrepo.jpg)
 
 The web application can be viewed [HERE](https://arcangyl1963.github.io/WK3-Password-Generator/).
 
