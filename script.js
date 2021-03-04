@@ -21,9 +21,11 @@ function generatePassword() {
   let passWordLength = prompt(
     'Choose a password length between 8 and 128 characters.'
   );
-    // if (passWordLength <= 7 || passWordLength >= 128) {
-    //   let passWordLength = prompt('Password must be between 8 and 128 characters. Please try again.');
-    // }
+    if ((passWordLength <= 7 || passWordLength >= 128)) {
+    passWordLength = prompt("The number you entered is not between 8 and 128. Enter a number between ");
+    } else {
+      passWordLength = passWordLength;
+    } 
     console.log(passWordLength);
   
   let numeric = confirm('Do you want numbers in your password?');
