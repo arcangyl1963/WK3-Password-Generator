@@ -6,48 +6,48 @@ var lowerCase = 'qwertyabcdefghijklmnopqrstuvwxyz';
 // uppercase characters allowed
 var upperCase = 'QWERTYABCDEFGHIJKLMNOPQRSTUVWXYZ';
 //special characters allowed
-var specialChars = "~`!@#$%^&*()_-+={[}]:;',.?/";
+var specialChars = "~`!@#$%^&*()_-+=<>{[}]:;',.?|/";
 // initialize variable for password length
 var passWordLength = '';
 // define variable to store the password characters
 var passWord = '';
 // define variable for the final generated password
 
-//Generate window prompts to confirm user selection of option
-//ask user if they want lowercase
+//Define window prompts of generatePassword function to confirm user's selection of character options for the password
 
 function generatePassword() {
   var pWord = '';
   let passWordLength = prompt(
     'Choose a password length between 8 and 128 characters.'
   );
+  //Validate user input meets the criteria
     if ((passWordLength <= 7 || passWordLength >= 128)) {
     passWordLength = prompt("The number you entered is not between 8 and 128. Enter a number between ");
     } else {
       passWordLength = passWordLength;
     } 
-    console.log(passWordLength);
-  
+  // Add characters to password variable based on user selections
   let numeric = confirm('Do you want numbers in your password?');
     if (numeric === true) {
     passWord = passWord.concat(numbers);
-    console.log(passWord);
+
     }
   let specChars = confirm('Do you want special characters in your password?');
     if (specChars == true) {
     passWord = passWord.concat(specialChars);
-    console.log(passWord);
+
   }
   let lcChars = confirm('Do you want lowercase characters in your password?');
     if (lcChars === true) {
     passWord = passWord.concat(lowerCase);
-    console.log(passWord);
+
   }
   let ucChars = confirm('Do you want uppercase characters in your password?');
     if (ucChars === true) {
     passWord = passWord.concat(upperCase);
-    console.log(passWord);
+
 }
+// loop through password variable and assign random characters to a new variable
   for (i = 1; i <= passWordLength; i++) {
     var passChar = Math.floor(Math.random() * passWord.length + 1);
     
@@ -64,7 +64,6 @@ function writePassword() {
   var mypasswordText = document.querySelector('#password');
   mypasswordText.value = mypassword;
 }
-
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
