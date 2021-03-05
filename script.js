@@ -61,6 +61,9 @@ var generateBtn = document.querySelector('#generate');
 // Write password to the #password input
 function writePassword() {
   var mypassword = generatePassword();
+  if (mypassword === '') {
+    mypassword = 'Password generation failed. You must click OK to at least one of the character type options:\n • numeric characters • special characters • lowercase characters • uppercase characters\nClick the Generate Password button and try again.'
+  }
   var mypasswordText = document.querySelector('#password');
   mypasswordText.value = mypassword;
 }
