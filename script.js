@@ -22,10 +22,15 @@ function generatePassword() {
   );
   //Validate user input meets the criteria
     if ((passWordLength <= 7 || passWordLength >= 128)) {
-    passWordLength = prompt("The number you entered is not between 8 and 128. Enter a number between ");
+    passWordLength = prompt("The number you entered is not between 8 and 128. Please enter a number between 8 and 128.");
     } else {
       passWordLength = passWordLength;
-    } 
+    }
+    if (/\D/.test(passWordLength)) {
+      passWordLength = prompt("The length selected must be a number. Please enter a number between 8 and 128.")
+    } else {
+      passWordLength = passWordLength;
+    }
   // Add characters to password variable based on user selections
   let numeric = confirm('Do you want numbers in your password?');
     if (numeric === true) {
